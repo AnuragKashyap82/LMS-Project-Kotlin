@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMaterialActivity"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/noticeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="Materials"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/pickPdfBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_pdf_ttachment_white"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/subNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="120dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_notice_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Enter Subject Name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <EditText
+                android:id="@+id/subTopicEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subNameEt"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_notice_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Enter Sub Topic"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <TextView
+                android:id="@+id/semTv"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/subTopicEt"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_down_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Select Semester"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <TextView
+                android:id="@+id/branchTv"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/semTv"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_down_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Select Branch"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <Button
+                android:id="@+id/uploadMaterialBtn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/branchTv"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape_rect02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:text="Upload Material"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

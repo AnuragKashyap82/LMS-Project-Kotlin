@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rect02"
+    android:padding="20dp">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:src="@drawable/ic_back_black"
+        app:tint="@color/black"/>
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="5dp"
+        android:text="Add Comment"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentTil"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/backBtn"
+        android:layout_marginTop="20dp"
+        android:hint="Comment"
+        app:startIconDrawable="@drawable/ic_comment_primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commentEt"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textColor="@color/black"
+            android:inputType="textCapSentences|textMultiLine"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commentTil"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_rect02"
+        android:text="Submit"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>

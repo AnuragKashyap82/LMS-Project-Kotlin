@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
     var classroomRl: RelativeLayout? = null
     var timeTableRl: RelativeLayout? = null
     var libraryRl: RelativeLayout? = null
+    var materialRl: RelativeLayout? = null
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseFirestore: FirebaseFirestore
 
@@ -91,6 +92,7 @@ class MainActivity : AppCompatActivity() {
         classroomRl = findViewById(R.id.classroomRl)
         timeTableRl = findViewById(R.id.timeTableRl)
         libraryRl = findViewById(R.id.libraryRl)
+        materialRl = findViewById(R.id.materialRl)
 
         val headerView = navigationView!!.getHeaderView(0)
         headerStudentIdTv = headerView.findViewById<View>(R.id.headerStudentIdTv) as TextView
@@ -100,12 +102,12 @@ class MainActivity : AppCompatActivity() {
         seeAllTv!!.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, DaysActivity::class.java))
         })
-//
-//        headerStudentIdTv!!.setOnClickListener {
-//            Toast.makeText(this, "Name Clicked.....!!!!", Toast.LENGTH_SHORT)
-//                .show()
-//            drawerLayout!!.closeDrawer(GravityCompat.START)
-//        }
+
+        headerStudentIdTv!!.setOnClickListener {
+            Toast.makeText(this, "Name Clicked.....!!!!", Toast.LENGTH_SHORT)
+                .show()
+            drawerLayout!!.closeDrawer(GravityCompat.START)
+        }
         profilePic!!.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
             drawerLayout!!.closeDrawer(GravityCompat.START)
@@ -131,6 +133,14 @@ class MainActivity : AppCompatActivity() {
                 Intent(
                     this,
                     LibraryActivity::class.java
+                )
+            )
+        })
+        materialRl!!.setOnClickListener(View.OnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    MaterialActivity::class.java
                 )
             )
         })
@@ -188,12 +198,12 @@ class MainActivity : AppCompatActivity() {
             val id = item.itemId
             val fragment: Fragment? = null
             when (id) {
-//                R.id.optClassroom -> startActivity(
-//                    Intent(
-//                        this@MainUsersActivity,
-//                        ClassroomActivity::class.java
-//                    )
-//                )
+                R.id.optClassroom -> startActivity(
+                    Intent(
+                        this,
+                        ClassroomActivity::class.java
+                    )
+                )
                 R.id.optTimeTable -> {
                     //                        startActivity(new Intent(MainUsersActivity.this, DaysActivity.class));
                     val calendar = Calendar.getInstance()
@@ -277,12 +287,12 @@ class MainActivity : AppCompatActivity() {
 //                        LectureActivity::class.java
 //                    )
 //                )
-//                R.id.optProfile -> startActivity(
-//                    Intent(
-//                        this@MainUsersActivity,
-//                        ProfileActivity::class.java
-//                    )
-//                )
+                R.id.optProfile -> startActivity(
+                    Intent(
+                        this,
+                        ProfileActivity::class.java
+                    )
+                )
 //                R.id.optChangePass -> startActivity(
 //                    Intent(
 //                        this@MainUsersActivity,
@@ -307,12 +317,12 @@ class MainActivity : AppCompatActivity() {
                         AddSliderActivity::class.java
                     )
                 )
-//                R.id.optAddUniqueIdBtn -> startActivity(
-//                    Intent(
-//                        this@MainUsersActivity,
-//                        AddUniqueIdActivity::class.java
-//                    )
-//                )
+                R.id.optAddUniqueIdBtn -> startActivity(
+                    Intent(
+                        this,
+                        AddUniqueIdActivity::class.java
+                    )
+                )
 //                R.id.optAddStudentBtn -> startActivity(
 //                    Intent(
 //                        this@MainUsersActivity,

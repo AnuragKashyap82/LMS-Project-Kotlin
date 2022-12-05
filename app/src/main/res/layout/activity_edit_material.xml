@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray00"
+    tools:context=".EditMaterialActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_rect01"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Update Material"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/materialPdfBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_pdf_primary" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="120dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/subNameTil"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            app:boxBackgroundColor="@color/textBox">
+
+            <EditText
+                android:id="@+id/subNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_library_primary"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:hint="Enter Subject Name"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/subTopicTil"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/subNameTil"
+            android:layout_marginBottom="45dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:boxBackgroundColor="@color/textBox">
+
+            <EditText
+                android:id="@+id/subTopicEt"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_library_primary"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:hint="Enter Subject Topic"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/updateMaterialBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/button_background"
+        android:drawablePadding="10dp"
+        android:layout_alignParentBottom="true"
+        android:minWidth="150dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:textAllCaps="false"
+        android:text="Update Material"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

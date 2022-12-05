@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray00"
+    tools:context=".MaterialViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_rect01"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/noticeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Study Material"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/topicTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/noticeTv"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="30dp"
+            android:text='Topic'
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/toolbarSubtitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:text="N/N"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/materialPdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRl"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="20dp"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_addButtonColorPressed="@color/colorPrimary"
+        app:fab_expandDirection="up"
+        app:fab_labelStyle="@drawable/shape_rect_03"
+        app:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editMaterialBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/ic_edit_white" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/deleteMaterialBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/ic_delete_white" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

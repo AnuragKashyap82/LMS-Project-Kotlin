@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaterialActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/noticeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="Materials"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/semTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="120dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_person_gray"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Select semester"
+                android:imeOptions="actionNext"
+                android:inputType="numberSigned"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <TextView
+                android:id="@+id/branchTv"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/semTv"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_notice_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Select Branch"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <Button
+                android:id="@+id/searchMaterialBtn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/branchTv"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape_rect02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:text="Search Material"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_circle00"
+        android:backgroundTint="@color/white"
+        android:elevation="30dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:layout_alignParentBottom="true"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_addButtonColorPressed="@color/colorPrimary"
+        app:fab_expandDirection="up"
+        app:fab_labelStyle="@drawable/shape_rect_03"
+        app:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addMaterialBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/ic_material_primary"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>
