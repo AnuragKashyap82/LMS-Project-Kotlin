@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".BookViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="12sp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/subjectNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="Subject name"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/todayAttendanceRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="7dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#FBEAEB"
+            android:layout_marginStart="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="30dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="25sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" >
+
+                <RelativeLayout
+                    android:id="@+id/filterHighToLow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book Name:"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="18dp"/>
+
+                    <TextView
+                        android:id="@+id/bookNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="Book Name"
+                        android:textColorHint="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/shape_rect02"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:backgroundTint="@color/colorGray00"
+                        android:inputType="textCapWords"
+                        android:fontFamily="@font/segoe_ui_regular"
+                        android:layout_below="@id/tv1"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginStart="16dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/emailRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/filterHighToLow"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Author Name:"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="18dp"/>
+
+                    <TextView
+                        android:id="@+id/authorNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="nfnwel"
+                        android:textColorHint="@color/black"
+                        android:textSize="14sp"
+                        android:padding="12sp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textAlignment="gravity"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/shape_rect02"
+                        android:backgroundTint="@color/colorGray00"
+                        android:inputType="textEmailAddress"
+                        android:fontFamily="@font/segoe_ui_regular"
+                        android:layout_below="@id/tv2"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="16dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bookIdRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailRl"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book No:"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="18dp"/>
+
+                    <TextView
+                        android:id="@+id/bookNoTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="nfnwel"
+                        android:textColorHint="@color/black"
+                        android:textSize="14sp"
+                        android:padding="12sp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textAlignment="gravity"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/shape_rect02"
+                        android:backgroundTint="@color/colorGray00"
+                        android:inputType="textEmailAddress"
+                        android:fontFamily="@font/segoe_ui_regular"
+                        android:layout_below="@id/tv4"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="16dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/quantityRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bookIdRl"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available Quantity:"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="18dp"/>
+
+                    <TextView
+                        android:id="@+id/quantityTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="23"
+                        android:textColorHint="@color/black"
+                        android:textSize="14sp"
+                        android:padding="12sp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textAlignment="gravity"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/shape_rect02"
+                        android:backgroundTint="@color/colorGray00"
+                        android:inputType="number"
+                        android:fontFamily="@font/segoe_ui_regular"
+                        android:layout_below="@id/tv5"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="16dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/njla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/quantityRl"
+                    android:layout_marginStart="12sp"
+                    android:layout_marginEnd="12sp"
+                    android:layout_marginTop="16dp">
+
+                    <Button
+                        android:id="@+id/issueBookBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/shape_rect02"
+                        android:fontFamily="@font/seg_ui_semibold"
+                        android:text="Issue"
+                        android:visibility="visible"
+                        android:textAllCaps="false" />
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "356965569316",
+    "project_id": "lms-kotlin-bce5d",
+    "storage_bucket": "lms-kotlin-bce5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356965569316:android:77126caeacc8721a1299b1",
+        "android_client_info": {
+          "package_name": "kashyap.anurag.lmskotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356965569316-vdcmaqtlrt45i4kqm9er4ib5cf859b31.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8ncWByYcyTE5e6nwK_eJognNmzxnIfRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356965569316-vdcmaqtlrt45i4kqm9er4ib5cf859b31.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

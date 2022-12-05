@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".EditAssignmentActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Update Assignment"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/pickPdfBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_pdf_primary"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            app:tint="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/assNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="120dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_assignment_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorPrimary"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:hint="Assignment Name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <TextView
+                android:id="@+id/fullMarksTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/assNameEt"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_library_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorPrimary"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Full Marks"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <TextView
+                android:id="@+id/dueDateTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fullMarksTv"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_calendar_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorPrimary"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Due Date"
+                android:imeOptions="actionNext"
+                android:inputType="date"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <Button
+                android:id="@+id/updateAssBtn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/dueDateTv"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:text="Update"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

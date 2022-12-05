@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".JoinClassActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Join Class"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/forTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:text="Ask Your teacher for the class code, then enter here"
+        android:textColor="@color/Gray01"
+        android:textSize="14sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/joinCodeTil"
+        android:layout_width="match_parent"
+        android:layout_below="@id/forTv"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        app:boxBackgroundColor="@color/white"
+        app:passwordToggleTint="@color/colorPrimary"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <EditText
+            android:id="@+id/joiningCodeEt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Class Code"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:paddingRight="26dp"
+            android:paddingLeft="26dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:textColorHint="@color/Gray01"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/joinClassBtn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/joinCodeTil"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/seg_ui_semibold"
+        android:text="Join Class"
+        android:textAllCaps="false" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:layout_below="@id/joinClassBtn"/>
+
+</RelativeLayout>

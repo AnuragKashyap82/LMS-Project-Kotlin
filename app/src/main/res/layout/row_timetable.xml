@@ -1,0 +1,136 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:ndroid="http://schemas.android.com/tools"
+    android:elevation="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/startTimeTv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_rect_06"
+            android:backgroundTint="#FBEAEB"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="9:30 am"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/endTimeTv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_rect_06"
+            android:backgroundTint="#FBEAEB"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="9:30 am"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/subNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/startTimeTv"
+            android:drawablePadding="22dp"
+            android:drawableStart="@drawable/ic_library_primary"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:maxLines="1"
+            android:text="Subject Name"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/teacherNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subNameTv"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/startTimeTv"
+            android:drawablePadding="22dp"
+            android:drawableStart="@drawable/ic_person_gray"
+            android:drawableTint="@color/colorGray02"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:maxLines="1"
+            android:text="Anurag Kashyap"
+            android:textSize="16sp"
+            ndroid:layout_toEndOf="@id/startTimeTv" />
+
+        <TextView
+            android:id="@+id/ongoingTopicTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teacherNameTv"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/startTimeTv"
+            android:drawablePadding="22dp"
+            android:drawableStart="@drawable/ic_library_primary"
+            android:drawableTint="@color/colorGray02"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="Ongoing Topic"
+            android:textSize="16sp"
+            ndroid:layout_toEndOf="@id/startTimeTv" />
+
+        <TextView
+            android:id="@+id/syllabusCompletedTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/endTimeTv"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="92%"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            ndroid:layout_toEndOf="@id/startTimeTv" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="17dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/syllabusCompletedTv"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="Syllabus completed"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

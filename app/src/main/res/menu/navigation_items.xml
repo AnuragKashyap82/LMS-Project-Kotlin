@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="My Activity">
+        <menu>
+            <item
+                android:id="@+id/optClassroom"
+                android:title="Classroom"
+                android:icon="@drawable/ic_classroom_black"/>
+
+            <item
+                android:id="@+id/optTimeTable"
+                android:title="Time Table"
+                android:icon="@drawable/ic_library_primary"/>
+
+            <item
+                android:id="@+id/optFav"
+                android:title="Favourites"
+                android:icon="@drawable/ic_favorite_white"/>
+
+            <item
+                android:id="@+id/optNotes"
+                android:title="Notes"
+                android:icon="@drawable/ic_notes_black"/>
+
+            <item
+                android:id="@+id/optNotice"
+                android:title="Notice"
+                android:icon="@drawable/ic_notice_primary"/>
+
+            <item
+                android:id="@+id/optLibrary"
+                android:title="Library"
+                android:icon="@drawable/ic_library_primary"/>
+
+            <item
+                android:id="@+id/optAttendance"
+                android:title="Attendance"
+                android:icon="@drawable/ic_attendance_primary"/>
+
+            <item
+                android:id="@+id/optMaterial"
+                android:title="Material"
+                android:icon="@drawable/ic_material_primary"/>
+
+            <item
+                android:id="@+id/optAss"
+                android:title="Assignment"
+                android:icon="@drawable/ic_assignment_primary"/>
+
+            <item
+                android:id="@+id/optLectures"
+                android:title="Lectures"
+                android:icon="@drawable/ic_library_primary"/>
+
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/optMeet"
+                android:icon="@drawable/ic_meet_black"
+                android:title="Join Meeting" />
+            <item
+                android:id="@+id/optMail"
+                android:icon="@drawable/ic_mail_black"
+                android:title="Mail Us"/>
+        </menu>
+    </item>
+
+    <item android:title="Profile">
+        <menu>
+            <item
+                android:id="@+id/optProfile"
+                android:icon="@drawable/ic_person_gray"
+                android:title="Profile" />
+            <item
+                android:id="@+id/optChangePass"
+                android:icon="@drawable/ic_lock_primary"
+                android:title="Change Password"/>
+            <item
+                android:id="@+id/optChangePhone"
+                android:icon="@drawable/ic_phone_gray"
+                android:title="Change Phone No"/>
+
+            <item
+                android:id="@+id/optSetting"
+                android:title="Setting"
+                android:icon="@drawable/ic_settings_primary"/>
+        </menu>
+    </item>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/optAddSliderBtn"
+                android:icon="@drawable/image_placeholder"
+                android:title="Slider Image"/>
+            <item
+                android:id="@+id/optAddUniqueIdBtn"
+                android:icon="@drawable/ic_person_gray"
+                android:title="Add UniqueId To Db"/>
+            <item
+                android:id="@+id/optAddStudentBtn"
+                android:icon="@drawable/ic_person_gray"
+                android:title="Add Student Name"/>
+            <item
+                android:id="@+id/optAboutUs"
+                android:icon="@drawable/ic_person_gray"
+                android:title="About Us"/>
+            <item
+                android:id="@+id/optChat"
+                android:title="Chat with Eduventure"
+                android:icon="@drawable/ic_chat_black"/>
+            <item
+                android:id="@+id/optRate"
+                android:title="Rate Us"
+                android:icon="@drawable/ic_rate_black"/>
+
+            <item
+                android:id="@+id/optShare"
+                android:title="Share app with friends"
+                android:icon="@drawable/ic_menu_share"/>
+        </menu>
+    </item>
+
+    <item android:title="Sign Out">
+        <menu>
+            <item
+                android:id="@+id/optLogout"
+                android:title="Logout"
+                android:icon="@drawable/ic_logout_black"/>
+        </menu>
+    </item>
+
+</menu>

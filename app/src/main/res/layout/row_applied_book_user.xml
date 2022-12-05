@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp">
+
+                <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                    android:id="@+id/profileIv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:c_border_width="1dp"
+                    app:c_border_color="@color/colorPrimary"
+                    android:src="@drawable/ic_person_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"/>
+
+                <TextView
+                    android:id="@+id/userNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_toEndOf="@id/profileIv"
+                    android:layout_marginStart="16dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seg_ui_semibold"
+                    android:text="Anurag Kashyap"/>
+
+                <TextView
+                    android:id="@+id/studentIdTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_toEndOf="@id/profileIv"
+                    android:layout_marginStart="16dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/userNameTv"
+                    android:fontFamily="@font/seg_ui_semibold"
+                    android:text="20989011913490"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+</LinearLayout>

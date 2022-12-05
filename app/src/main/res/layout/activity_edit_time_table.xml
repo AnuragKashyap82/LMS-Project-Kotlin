@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".EditTimeTableActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/dayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Day"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/subjectEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="120dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_library_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Subject Name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <EditText
+                android:id="@+id/classTeacherNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subjectEt"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_person_gray"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Teacher Name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <TextView
+                android:id="@+id/startTimeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/classTeacherNameEt"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_clock_black"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:gravity="center_vertical"
+                android:hint="Pick Starts Time"
+                android:imeOptions="actionNext"
+                android:inputType="time"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <TextView
+                android:id="@+id/endTimeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/startTimeTv"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_clock_black"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:gravity="center_vertical"
+                android:hint="Pick End Time"
+                android:imeOptions="actionNext"
+                android:inputType="time"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <EditText
+                android:id="@+id/ongoingTopicEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/endTimeTv"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_library_primary"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Ongoing Topic"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+            <EditText
+                android:id="@+id/syllabusCompletedEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ongoingTopicEt"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorGray02"
+                android:drawableEnd="@drawable/ic_person_gray"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/colorGray02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:hint="Syllabus Complete %"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Gray01" />
+
+
+            <Button
+                android:id="@+id/updateTimeTableBtn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/syllabusCompletedEt"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape_rect02"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:text="Update"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_circle00"
+        android:backgroundTint="@color/white"
+        android:elevation="30dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

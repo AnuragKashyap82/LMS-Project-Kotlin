@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/personDetailsRl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/noticeNoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noticeTitleTv"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/noticeIv"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:maxLines="1"
+            android:text="0001"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/noticeTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/noticeIv"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:maxLines="1"
+            android:maxWidth="280dp"
+            android:text="Notice Name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/noticeIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_notice_primary"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/noticeTitleTv"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:text="18/08/2002 12 ;34 am"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

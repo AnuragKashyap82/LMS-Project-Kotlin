@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ClassroomViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/subjectNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="SubjectName"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl"
+        android:layout_above="@id/classroomOptionsLl">
+
+        <RelativeLayout
+            android:id="@+id/classPostRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="5dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/classPostRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_classpost" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/classroomOptionsLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="20dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/assBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_assignment_white"
+            android:drawableTint="@color/colorPrimary"
+            android:text="Assignment"
+            android:textSize="10dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/postBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_edit_white"
+            android:drawableTint="@color/colorPrimary"
+            android:text="Post"
+            android:textSize="10dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/attendanceBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_attendance_primary"
+            android:drawableTint="@color/colorPrimary"
+            android:text="Attendance"
+            android:textSize="10dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/myAttendanceBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_attendance_primary"
+            android:drawableTint="@color/colorPrimary"
+            android:text="Attendance"
+            android:textSize="10dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+</RelativeLayout>

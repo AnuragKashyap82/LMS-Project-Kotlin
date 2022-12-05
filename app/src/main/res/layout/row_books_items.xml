@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp"
+        android:backgroundTint="@color/white"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/subjectNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:text="Subject Name"/>
+
+                <TextView
+                    android:id="@+id/bookNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_below="@id/subjectNameTv"
+                    android:textColor="@color/black"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:text="Book Name"/>
+
+                <TextView
+                    android:id="@+id/bookId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Id: 7913"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    android:includeFontPadding="false"
+                    android:layout_below="@id/bookNameTv"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seg_ui_semibold"/>
+
+                <TextView
+                    android:id="@+id/AuthorNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anurag Kashyap"
+                    android:layout_alignParentEnd="true"
+                    android:padding="0dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="2dp"
+                    android:includeFontPadding="false"
+                    android:layout_below="@id/bookId"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seg_ui_semibold"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="textBox">#FFFFFFFF</color>
+    <color name="blue01">#0D78A9</color>
+    <color name="colorPrimary">#0d6efd</color>
+    <color name="colorSecondary">#1976d2</color>
+    <color name="endColor">#64739A</color>
+    <color name="red">#F60D4E</color>
+    <color name="green">#08ED2E</color>
+
+    <color name="Gray01">#655E5E</color>
+    <color name="colorGray00">#f5f0f0</color>
+    <color name="colorGray01">#D6D5D5</color>
+    <color name="strokesColor">#D6D5D5</color>
+    <color name="colorGray02">#959595</color>
+</resources>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="7dp"
+    android:backgroundTint="#FBEAEB"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:cardCornerRadius="25sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issue Book"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="18dp"/>
+
+        <RelativeLayout
+            android:id="@+id/filterHighToLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv3"
+            android:layout_marginTop="12sp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Name"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="18dp"/>
+
+            <TextView
+                android:id="@+id/bookNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Book Name"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_rect02"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:backgroundTint="@color/colorGray00"
+                android:inputType="textCapWords"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:layout_below="@id/tv1"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginStart="16dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/emailRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filterHighToLow"
+            android:layout_marginTop="12sp">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Id:"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="18dp"/>
+
+            <TextView
+                android:id="@+id/bookIdTv"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Book Id"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                android:padding="12sp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textAlignment="gravity"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_rect02"
+                android:backgroundTint="@color/colorGray00"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:layout_below="@id/tv2"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginStart="16dp"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/emailRl"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:background="@drawable/shape_rect_05"
+                android:textColor="@color/white"
+                android:text="Cancel"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                android:textSize="14sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/issueBookBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:background="@drawable/shape_rect_05"
+                android:textColor="@color/white"
+                android:text="Confirm"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

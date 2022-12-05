@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom"
+    android:padding="5dp"
+    android:background="@drawable/shape_rect01"
+    android:orientation="vertical">
+
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+        android:id="@+id/profileIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_person_gray"
+        android:tint="@color/Gray01"
+        app:c_border="true"
+        android:elevation="10dp"
+        android:layout_marginLeft="10dp"
+        app:c_border_color="@color/colorPrimary"
+        app:c_border_width="1dp"
+        android:contentDescription="Header Image"/>
+
+    <TextView
+        android:id="@+id/headerStudentIdTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="209011001015"
+        android:fontFamily="@font/seg_ui_semibold"
+        android:textSize="18sp"
+        android:maxWidth="400dp"
+        android:layout_marginLeft="10dp"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/headerEmailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="anurag@kashyap.com"
+        android:textStyle="normal"
+        android:maxLines="1"
+        android:maxWidth="380dp"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+</LinearLayout>

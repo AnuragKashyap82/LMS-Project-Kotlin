@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/personDetailsRl"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/moreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_more_black"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:text="18/08/2002 12 ;34 am"
+            android:textColor="@color/Gray01"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/attachmentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/profileIv"
+            android:background="@drawable/shape_rect02"
+            android:backgroundTint="#1C4E13"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:padding="2dp"
+            android:text="Attachments"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/postTextTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/profileIv"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:maxLines="1"
+            android:text="postText"
+            android:textColor="@color/Gray01"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/profileIv"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:maxLines="1"
+            android:maxWidth="280dp"
+            android:text="Person Name"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/profileIv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_gray"
+            app:shapeAppearanceOverlay="@style/styleRoundCornerImage"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
