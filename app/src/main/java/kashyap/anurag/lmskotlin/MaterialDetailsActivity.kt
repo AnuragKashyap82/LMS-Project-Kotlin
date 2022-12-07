@@ -19,7 +19,11 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
+import kashyap.anurag.lmskotlin.Adapters.AdapterAssignment
+import kashyap.anurag.lmskotlin.Adapters.AdapterComment
 import kashyap.anurag.lmskotlin.Constants.Companion.MAX_BYTES_PDF
+import kashyap.anurag.lmskotlin.Models.ModelAssignment
+import kashyap.anurag.lmskotlin.Models.ModelComment
 import kashyap.anurag.lmskotlin.databinding.ActivityMaterialDetailsBinding
 import kashyap.anurag.lmskotlin.databinding.DialogCommentAddBinding
 import java.io.FileOutputStream
@@ -36,6 +40,8 @@ class MaterialDetailsActivity : AppCompatActivity() {
     var topic: String? = null
     var subject: String? = null
     var isInMyFavorite: Boolean? = false
+    private lateinit var commentArrayList: ArrayList<ModelComment>
+    private lateinit var adapterComment: AdapterComment
 
     private var progressDialog: ProgressDialog? = null
 
@@ -62,7 +68,7 @@ class MaterialDetailsActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         loadMaterialDetails()
-//        loadComments()
+        loadComments()
         checkIsFavorite()
 
         binding.backBtn.setOnClickListener { onBackPressed() }
@@ -302,29 +308,25 @@ class MaterialDetailsActivity : AppCompatActivity() {
             })
     }
 
-    //    private void checkIsFavorite() {
-    //        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
-    //
-    //        reference.child(firebaseAuth.getUid()).child("Favorites").child(materialId)
-    //                .addValueEventListener(new ValueEventListener() {
-    //                    @Override
-    //                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-    //                        isInMyFavorite = snapshot.exists();
-    //                        if (isInMyFavorite) {
-    //                            binding.favoriteBtn.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.drawable.ic_favorite_white, 0, 0);
-    //                            binding.favoriteBtn.setText("Remove Favorite");
-    //                        } else {
-    //                            binding.favoriteBtn.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.drawable.ic_favorite_border_white, 0, 0);
-    //                            binding.favoriteBtn.setText("Add Favorite");
-    //                        }
-    //                    }
-    //
-    //                    @Override
-    //                    public void onCancelled(@NonNull DatabaseError error) {
-    //
-    //                    }
-    //                });
-    //    }
+    private fun loadComments() {
+        commentArrayList = ArrayList<ModelComment>()
+        val reference = FirebaseDatabase.getInstance().getReference("Material")
+        reference.child(branch!!).child(semester!!).child(materialId!!).child("Comments")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    commentArrayList.clear()
+                    for (ds in snapshot.children) {
+                        val model: ModelComment? = ds.getValue(ModelComment::class.java)
+                        commentArrayList.add(model!!)
+                    }
+                    adapterComment = AdapterComment(this@MaterialDetailsActivity, commentArrayList)
+                    binding.commentsRv.adapter = adapterComment
+                }
+
+                override fun onCancelled(error: DatabaseError) {}
+            })
+    }
+
     fun downloadBook(
         context: Context?,
         materialId: String?,

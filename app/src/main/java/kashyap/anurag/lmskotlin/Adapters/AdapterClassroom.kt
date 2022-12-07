@@ -77,8 +77,7 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
     }
 
     private fun loadClassDetails(model: ModelClassroom, holder: HolderClassroom) {
-        val documentReference =
-            FirebaseFirestore.getInstance().collection("classroom").document(model.classCode)
+        val documentReference = FirebaseFirestore.getInstance().collection("classroom").document(model.classCode)
         documentReference.addSnapshotListener { ds, error ->
 
             val subjectName = "" + ds!!.getString("subjectName")
@@ -122,7 +121,6 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
             val name = "" + ds!!.getString("name")
             val profileImage = "" + ds.getString("profileImage")
 
-
             binding.classTeacherTv.text = "($name)"
 
             try {
@@ -135,8 +133,6 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
     }
 
     private fun showBottomSheetDialog(modelClassroom: ModelClassroom, holder: HolderClassroom) {
-        val classCode: String = modelClassroom.classCode
-        val uid: String = modelClassroom.uid
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.bs_post_type_options)

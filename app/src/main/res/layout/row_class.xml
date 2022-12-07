@@ -29,7 +29,7 @@
             android:fontFamily="@font/segoe_ui_bold"
             android:maxLines="1"
             android:maxWidth="280dp"
-            android:text="Class Name"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -42,7 +42,7 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/seg_ui_semibold"
             android:maxLines="1"
-            android:text="4th Sem Cse"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="12dp" />
 
@@ -55,7 +55,7 @@
             android:layout_marginBottom="0dp"
             android:fontFamily="@font/seg_ui_semibold"
             android:maxLines="1"
-            android:text="Class Code"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -118,7 +118,7 @@
             android:fontFamily="@font/seg_ui_semibold"
             android:maxLines="1"
             android:maxWidth="300dp"
-            android:text="ClassTeacher Name"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="12dp" />
 
