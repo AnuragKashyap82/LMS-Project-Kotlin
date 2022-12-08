@@ -1,8 +1,16 @@
 package kashyap.anurag.lmskotlin
 
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import kashyap.anurag.lmskotlin.Adapters.AdapterClassroom
+import kashyap.anurag.lmskotlin.databinding.RowClassBinding
+
 class Constants {
 
     companion object {
+
+         var joiningCode: String = ""
+
         const val MAX_BYTES_PDF: Long = 50000000
 
         val marksCategories = arrayOf(
@@ -37,7 +45,6 @@ class Constants {
             "7th Semester",
             "8th Semester"
         )
-
     }
 
 

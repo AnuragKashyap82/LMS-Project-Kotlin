@@ -29,7 +29,7 @@
                     android:includeFontPadding="false"
                     android:textColor="@color/black"
                     android:fontFamily="@font/segoe_ui_bold"
-                    android:text="Subject Name"/>
+                    android:text=""/>
 
                 <TextView
                     android:id="@+id/bookNameTv"
@@ -40,7 +40,7 @@
                     android:textColor="@color/black"
                     android:includeFontPadding="false"
                     android:fontFamily="@font/segoe_ui_regular"
-                    android:text="Book Name"/>
+                    android:text=""/>
 
                 <TextView
                     android:id="@+id/bookId"
@@ -59,7 +59,7 @@
                     android:id="@+id/AuthorNameTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Anurag Kashyap"
+                    android:text=""
                     android:layout_alignParentEnd="true"
                     android:padding="0dp"
                     android:layout_marginEnd="5dp"
@@ -86,7 +86,7 @@
                     android:id="@+id/issuedDateTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="04/06/2004"
+                    android:text=""
                     android:padding="0dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginTop="2dp"

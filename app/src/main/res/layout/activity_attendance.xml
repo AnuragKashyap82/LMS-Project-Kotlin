@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AttendanceActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/imageAddRl"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/black"
+            android:layout_centerVertical="true"
+            android:padding="12sp"/>
+
+        <TextView
+            android:id="@+id/subjectNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ClassName"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/backBtn"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/moreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_black"
+            app:tint="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:padding="12sp"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageAddRl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/classNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:textSize="16dp"
+                android:text="Cse 5th sem"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/noOfStudentsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray01"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:textSize="16dp"
+                android:text="Total Students: 01"
+                android:layout_below="@id/classNameTv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noOfStudentsTv"
+                android:layout_margin="16dp">
+
+                <Button
+                    android:id="@+id/createAttendanceBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:text="Create Attendance"
+                    android:background="@drawable/button_background"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/seg_ui_semibold"/>
+
+                <Button
+                    android:id="@+id/reportBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:text="Reports"
+                    android:background="@drawable/button_background"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/seg_ui_semibold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:textSize="16dp"
+                android:text="Quick Attendance:"
+                android:layout_below="@id/ll"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rvLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv1">
+
+                <TextView
+                    android:id="@+id/doneTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray01"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:textSize="16dp"
+                    android:text="Today's attendance is Marked!"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/studentsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/submitAttendanceBtn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/rvLl"
+                android:layout_marginBottom="14sp"
+                android:layout_marginEnd="14sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="14sp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:text="Submit" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

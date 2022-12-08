@@ -17,8 +17,8 @@ class SubmittedAssignmentActivity : AppCompatActivity() {
     private lateinit var firebaseFirestore: FirebaseFirestore
     private lateinit var firebaseAuth: FirebaseAuth
 
-    private var assignmentId: String? = null
-    private var classCode: String? = null
+    private var assignmentId: String? = ""
+    private var classCode: String? = "null"
 
     private lateinit var submittedAssArrayList: ArrayList<ModelSubmittedAss>
     private lateinit var adapterSubmittedAss: AdapterSubmittedAss

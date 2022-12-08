@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/studentNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anurag Kashyap"
+        android:fontFamily="@font/seg_ui_semibold"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/studentRegNoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anurag Kashyap"
+        android:layout_below="@id/studentNameTv"
+        android:fontFamily="@font/seg_ui_semibold"
+        android:textColor="@color/Gray01"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:id="@+id/presentRl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/absentRl">
+
+        <CheckBox
+            android:id="@+id/presentBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:text="P"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/presentBtn"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/absentRl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginEnd="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
+
+        <CheckBox
+            android:id="@+id/absentBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:text="A"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/absentBtn"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

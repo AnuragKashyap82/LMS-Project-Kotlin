@@ -52,7 +52,7 @@ class AdapterClassroomPost: RecyclerView.Adapter<AdapterClassroomPost.HolderClas
         val uid = model.uid
         val isAttachmentExist = model.attachmentExist
 
-        loadMsgSenderDetails(model, holder)
+        loadMsgSenderDetails(model, holder, binding)
 
         checkAttachment(model, holder)
 
@@ -77,7 +77,11 @@ class AdapterClassroomPost: RecyclerView.Adapter<AdapterClassroomPost.HolderClas
         }
     }
 
-    private fun loadMsgSenderDetails(model: ModelClassroomPost, holder: HolderClassroomPost) {
+    private fun loadMsgSenderDetails(
+        model: ModelClassroomPost,
+        holder: HolderClassroomPost,
+        binding: RowClasspostBinding
+    ) {
         val documentReference = FirebaseFirestore.getInstance().collection("Users").document(model.uid)
         documentReference.addSnapshotListener { ds, error ->
             val name = "" + ds!!.getString("name")

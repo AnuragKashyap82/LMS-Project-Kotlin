@@ -37,10 +37,14 @@ class AdapterReturnedBook : RecyclerView.Adapter<AdapterReturnedBook.HolderRetur
         binding.yd.setText("Returned Date:")
 
         binding.issuedDateTv.setText(returnDate)
-        loadBooksDetails(holder, timestamp)
+        loadBooksDetails(holder, timestamp, binding)
     }
 
-    private fun loadBooksDetails(holder: AdapterReturnedBook.HolderReturnedBook, timestamp: String) {
+    private fun loadBooksDetails(
+        holder: HolderReturnedBook,
+        timestamp: String,
+        binding: RowIssuedBooksBinding
+    ) {
         val documentReference =
             FirebaseFirestore.getInstance().collection("Books").document(timestamp)
         documentReference.addSnapshotListener { snapshot, error ->

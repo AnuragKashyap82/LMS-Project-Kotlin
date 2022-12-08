@@ -45,7 +45,7 @@ class AdapterAppliedUser: RecyclerView.Adapter<AdapterAppliedUser.HolderAppliedU
         val model = appliedUserArrayList[position]
         val uid = model.uid
 
-        loadUserDetails(uid, holder)
+        loadUserDetails(uid, holder, binding)
 
         if (LAYOUT_CODE == "ADMIN") {
             holder.itemView.setOnClickListener(View.OnClickListener {
@@ -62,7 +62,11 @@ class AdapterAppliedUser: RecyclerView.Adapter<AdapterAppliedUser.HolderAppliedU
         }
     }
 
-    private fun loadUserDetails(uid: String, holder: HolderAppliedUser) {
+    private fun loadUserDetails(
+        uid: String,
+        holder: HolderAppliedUser,
+        binding: RowAppliedBookUserBinding
+    ) {
         val documentReference =
             FirebaseFirestore.getInstance().collection("Users").document(uid)
         documentReference.addSnapshotListener { ds, error ->

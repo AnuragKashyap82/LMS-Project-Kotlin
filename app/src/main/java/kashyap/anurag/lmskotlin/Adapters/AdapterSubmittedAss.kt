@@ -54,7 +54,7 @@ class AdapterSubmittedAss: RecyclerView.Adapter<AdapterSubmittedAss.HolderSubmit
         calendar.timeInMillis = date.toLong()
         val dateFormat = DateFormat.format("dd/MM/yyyy", calendar).toString()
 
-        loadStudentsDetails(model, holder)
+        loadStudentsDetails(model, holder, binding)
 
         binding.dateTv.setText(dateFormat)
         binding.obtainedMarksTv.setText(marksObtained)
@@ -74,7 +74,8 @@ class AdapterSubmittedAss: RecyclerView.Adapter<AdapterSubmittedAss.HolderSubmit
 
     private fun loadStudentsDetails(
         modelAssignment: ModelSubmittedAss,
-        holder: HolderSubmittedAss
+        holder: HolderSubmittedAss,
+        binding: RowSubmittedAssBinding
     ) {
         val uid: String = modelAssignment.uid
         val documentReference = firebaseFirestore.collection("Users").document(uid)

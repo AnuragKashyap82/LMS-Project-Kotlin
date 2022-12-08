@@ -53,7 +53,7 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
         val timestamp = model.timestamp
 
         binding.classCode.setText(classCode)
-        loadClassDetails(model, holder)
+        loadClassDetails(binding, classCode, holder, firebaseAuth)
 
         holder.copyClassCodeBtn.setOnClickListener(View.OnClickListener {
             val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
@@ -73,11 +73,16 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
             intent.putExtra("classCode", classCode)
             context.startActivity(intent)
         }
-
     }
 
-    private fun loadClassDetails(model: ModelClassroom, holder: HolderClassroom) {
-        val documentReference = FirebaseFirestore.getInstance().collection("classroom").document(model.classCode)
+    fun loadClassDetails(
+        binding: RowClassBinding,
+        classCode: String,
+        holder: AdapterClassroom.HolderClassroom,
+        firebaseAuth: FirebaseAuth
+    ) {
+
+        val documentReference = FirebaseFirestore.getInstance().collection("classroom").document(classCode)
         documentReference.addSnapshotListener { ds, error ->
 
             val subjectName = "" + ds!!.getString("subjectName")
@@ -90,12 +95,12 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
             binding.classNameTv.text = className
             binding.subjectNameTv.text = subjectName
 
-            loadClassTeacherDetails(uid, holder)
+                loadClassTeacherDetails(uid, holder, binding)
 
             holder.moreBtn.setOnClickListener {
                 if (uid == firebaseAuth.uid) {
                 } else {
-                    showBottomSheetDialog(model, holder)
+                        showBottomSheetDialog(classCode, holder)
                 }
             }
 
@@ -113,7 +118,12 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
         }
     }
 
-    private fun loadClassTeacherDetails(uid: String, holder: HolderClassroom) {
+
+    private fun loadClassTeacherDetails(
+        uid: String,
+        holder: HolderClassroom,
+        binding: RowClassBinding
+    ) {
         val documentReference =
             FirebaseFirestore.getInstance().collection("Users").document(uid)
         documentReference.addSnapshotListener { ds, error ->
@@ -132,7 +142,7 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
         }
     }
 
-    private fun showBottomSheetDialog(modelClassroom: ModelClassroom, holder: HolderClassroom) {
+    private fun showBottomSheetDialog(classCode: String, holder: HolderClassroom) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.bs_post_type_options)
@@ -164,7 +174,7 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
                 .setPositiveButton(
                     "Yes"
                 ) { dialogInterface, i ->
-                    unEnrollClassroom(modelClassroom, holder)
+                    unEnrollClassroom(classCode, holder)
                 }
                 .setNegativeButton(
                     "No"
@@ -173,10 +183,10 @@ class AdapterClassroom: RecyclerView.Adapter<AdapterClassroom.HolderClassroom> {
         }
     }
 
-    private fun unEnrollClassroom(modelClassroom: ModelClassroom, holder: HolderClassroom) {
+    private fun unEnrollClassroom(classCode: String, holder: HolderClassroom) {
         val documentReference = firebaseFirestore.collection("Users").document(
             firebaseAuth.uid!!
-        ).collection("classroom").document(modelClassroom.classCode)
+        ).collection("classroom").document(classCode)
         documentReference.delete()
             .addOnSuccessListener {
                 Toast.makeText(context, "Class UnEnroll...!", Toast.LENGTH_SHORT).show()

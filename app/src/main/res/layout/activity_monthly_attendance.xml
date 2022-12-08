@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MonthlyAttendanceActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/white"
+        android:padding="0dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/black"
+            android:layout_centerVertical="true"
+            android:padding="12sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/backBtn"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/subjectNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ClassName"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/classNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ClassName"
+                android:layout_below="@id/subjectNameTv"
+                android:textColor="@color/Gray01"
+                android:textSize="14sp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/totalClassCountTv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_rect02"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="123"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/monthRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/toolbarRl">
+
+        <EditText
+            android:id="@+id/monthTv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/shape_rect02"
+            android:hint="Select Month"
+            android:drawableStart="@drawable/ic_calendar_primary"
+            android:drawableTint="@color/colorGray02"
+            android:drawablePadding="8dp"
+            android:paddingStart="12sp"
+            android:inputType="number"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:paddingEnd="12sp"/>
+
+        <EditText
+            android:id="@+id/yearTv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/shape_rect02"
+            android:hint="Select Year"
+            android:drawableStart="@drawable/ic_calendar_primary"
+            android:drawableTint="@color/colorGray02"
+            android:drawablePadding="8dp"
+            android:paddingStart="12sp"
+            android:inputType="number"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:paddingEnd="12sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tableRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/monthRl">
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="0dp">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/black"
+                    android:gravity="start"
+                    android:layout_marginStart="0dp"
+                    android:text="Student Name"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:padding="5dp"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="Total Present"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:padding="5dp"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="Atten.Percent"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:padding="5dp"
+                    android:textSize="14sp"/>
+
+            </TableRow>
+
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tableRl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/studentsRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_over_all_attend_item" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

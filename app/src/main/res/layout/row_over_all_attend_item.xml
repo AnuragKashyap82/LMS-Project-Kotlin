@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/studentNameTv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:text="Student Names"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:padding="5dp"
+                android:includeFontPadding="false"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/presentDaysTv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="23 283a5189f"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:padding="5dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/presentPercentTv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:textColor="#55EB57"
+                android:gravity="center"
+                android:text="80%"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:padding="5dp"
+                android:textSize="14sp"/>
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</RelativeLayout>

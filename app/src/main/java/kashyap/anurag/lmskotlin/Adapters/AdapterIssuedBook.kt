@@ -47,7 +47,7 @@ class AdapterIssuedBook : RecyclerView.Adapter<AdapterIssuedBook.HolderIssuedBoo
         val timestamp = model.timestamp
 
         binding.issuedDateTv.setText(issuedDate)
-        loadBookDetails(holder, timestamp)
+        loadBookDetails(holder, timestamp, binding)
 
         if (ADMIN_CODE == "ADMIN") {
             holder.itemView.setOnClickListener {
@@ -57,7 +57,11 @@ class AdapterIssuedBook : RecyclerView.Adapter<AdapterIssuedBook.HolderIssuedBoo
         }
     }
 
-    private fun loadBookDetails(holder: AdapterIssuedBook.HolderIssuedBooks, timestamp: String) {
+    private fun loadBookDetails(
+        holder: HolderIssuedBooks,
+        timestamp: String,
+        binding: RowIssuedBooksBinding
+    ) {
         val documentReference =
             FirebaseFirestore.getInstance().collection("Books").document(timestamp)
         documentReference.addSnapshotListener { snapshot, error ->

@@ -48,11 +48,11 @@ class ClassroomViewActivity : AppCompatActivity() {
         binding.postBtn.setOnClickListener {
             showBottomSheet()
         }
-//        binding.attendanceBtn.setOnClickListener {
-//            val intent = Intent(this@ClassroomViewActivity, AttendanceActivity::class.java)
-//            intent.putExtra("classCode", "" + classCode)
-//            startActivity(intent)
-//        }
+        binding.attendanceBtn.setOnClickListener {
+            val intent = Intent(this@ClassroomViewActivity, AttendanceActivity::class.java)
+            intent.putExtra("classCode", "" + classCode)
+            startActivity(intent)
+        }
 //        binding.myAttendanceBtn.setOnClickListener {
 //            val intent = Intent(this@ClassroomViewActivity, MyAttendanceActivity::class.java)
 //            intent.putExtra("classCode", "" + classCode)

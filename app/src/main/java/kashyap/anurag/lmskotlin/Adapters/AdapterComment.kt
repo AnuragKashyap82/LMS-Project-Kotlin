@@ -1,7 +1,6 @@
 package kashyap.anurag.lmskotlin.Adapters
 
 import android.content.Context
-import android.media.Image
 import android.text.format.DateFormat
 import android.view.*
 import android.widget.ImageView
@@ -9,7 +8,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
 import kashyap.anurag.lmskotlin.Models.ModelComment
@@ -45,7 +43,7 @@ class AdapterComment: RecyclerView.Adapter<AdapterComment.HolderComment>  {
         val uid = model.uid
         val timestamp = model.timestamp
 
-        loadUserDetails(model, holder)
+        loadUserDetails(model, holder, binding)
 
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = timestamp.toLong()
@@ -61,7 +59,11 @@ class AdapterComment: RecyclerView.Adapter<AdapterComment.HolderComment>  {
             }
         }
     }
-    private fun loadUserDetails(modelComment: ModelComment, holder: HolderComment) {
+    private fun loadUserDetails(
+        modelComment: ModelComment,
+        holder: HolderComment,
+        binding: RowCommentBinding
+    ) {
         val documentReference =
             FirebaseFirestore.getInstance().collection("Users").document(modelComment.uid)
         documentReference.addSnapshotListener { ds, error ->
